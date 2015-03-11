@@ -1,0 +1,12 @@
+﻿<Window x:Class="Leo_travel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="450
+        ">
+    
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="http://www.mandrivochka.if.ua/sites/default/files/lviv.jpg"/>
+        </Grid.Background>
+    </Grid>
+</Window>
