@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Leo_travel
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для L.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class L : Window
     {
-        public MainWindow()
+        public L()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-            Log w1 = new Log();
-            w1.Show();
         }
     }
 }
