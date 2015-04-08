@@ -1,1 +1,13 @@
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\bin\Debug\Leo-travel.exe.config
+D:\програми\Leo-travel\Leo-travel\Leo-travel\bin\Debug\Leo-travel.exe.config
+D:\програми\Leo-travel\Leo-travel\Leo-travel\bin\Debug\Leo-travel.exe
+D:\програми\Leo-travel\Leo-travel\Leo-travel\bin\Debug\Leo-travel.pdb
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\MainWindow.baml
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\MainWindow.g.cs
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\App.g.cs
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel_MarkupCompile.cache
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.g.resources
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo_travel.Properties.Resources.resources
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.csproj.GenerateResource.Cache
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.exe
+D:\програми\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.pdb
