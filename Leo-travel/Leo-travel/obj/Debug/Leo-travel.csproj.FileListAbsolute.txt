@@ -11,3 +11,7 @@ E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo_travel.Properties.Res
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.csproj.GenerateResource.Cache
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.exe
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.pdb
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\L.baml
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Log.baml
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\L.g.cs
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Log.g.cs
