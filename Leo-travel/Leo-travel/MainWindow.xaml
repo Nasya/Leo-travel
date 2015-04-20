@@ -8,8 +8,31 @@
         <Grid.Background>
             <ImageBrush ImageSource="E:\Projects\Leo-travel\Leo-travel\Leo-travel\pics\lviv.jpg"/>
         </Grid.Background>
-        <TabControl HorizontalAlignment="Right" Height="421"  Width="441" Opacity="1" Background="Transparent" Margin="0,-1,1,0"  >
-            <TabItem Header="Екскурсії" Cursor="Arrow" Margin="2" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
+        <TabControl HorizontalAlignment="Right"  Width="441" Opacity="1" Background="Transparent" Margin="0,37,1,0"  >
+            <TabItem Header="Екскурсії" Cursor="Arrow" Margin="9,0,-9,0" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
+
+                <TabItem.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </TabItem.BorderBrush>
+                <TabItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TabItem.RenderTransform>
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,-2" Opacity="0.755">
+                    <DataGrid AutoGenerateColumns="True" x:Name="DataGrid1" HorizontalAlignment="Left" Margin="1,5,0,0" VerticalAlignment="Top" Height="298" Width="424" />
+                    <Button x:Name="Load_table" Content="Load" HorizontalAlignment="Left" Margin="189,311,0,0" VerticalAlignment="Top" Width="75" Click="Load_table_Click"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Визначні місця" Cursor="Arrow" Margin="25,-1,-25,1" MinWidth="150" MinHeight="30" MaxWidth="150" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
                 <TabItem.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -27,25 +50,7 @@
                 <Grid Background="#FFE5E5E5" Opacity="0" Margin="0,0,0,-5"/>
             </TabItem>
 
-            <TabItem Header="Визначні місця" Cursor="Arrow" Margin="2" MinWidth="150" MinHeight="30" MaxWidth="150" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
-                <TabItem.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="White"/>
-                    </LinearGradientBrush>
-                </TabItem.BorderBrush>
-                <TabItem.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="1" ScaleX="1"/>
-                        <SkewTransform AngleY="0" AngleX="0"/>
-                        <RotateTransform Angle="0"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </TabItem.RenderTransform>
-                <Grid Background="#FFE5E5E5" Opacity="0" Margin="0,0,0,-5"/>
-            </TabItem>
-
-            <TabItem Header="Ресторани" Cursor="Arrow" Margin="2" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
+            <TabItem Header="Ресторани" Cursor="Arrow" Margin="56,0,-56,0" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
                 <TabItem.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -68,6 +73,8 @@
 
         </TabControl>
         <Button  HorizontalAlignment="Left" Margin="411,4,0,0" VerticalAlignment="Top" Width="21" Height="13" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="37,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="329,10,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 
 </Window>

@@ -7,8 +7,17 @@
         <Label Content="Enter login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,117,0,0" FontSize="16" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
         <Label Content="Autentification" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="138,29,0,0" FontSize="22" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
         <TextBox HorizontalAlignment="Left" Height="32" Margin="43,152,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="147" SpellCheck.IsEnabled="True" />
-        <TextBox HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="147" Margin="241,153,0,0" />
         <Button Content="Log In" HorizontalAlignment="Left" Margin="159,217,0,0" VerticalAlignment="Top" Width="99" Height="38" FontSize="18" Click="Button_Click"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="234,153,0,0" VerticalAlignment="Top" Height="31" Width="147" RenderTransformOrigin="0.5,0.5">
+            <PasswordBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.029"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </PasswordBox.RenderTransform>
+        </PasswordBox>
 
     </Grid>
 </Window>
