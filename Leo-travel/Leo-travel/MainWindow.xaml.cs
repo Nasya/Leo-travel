@@ -47,21 +47,23 @@ namespace Leo_travel
                 myDataAdapter.SelectCommand = new MySqlCommand("select * database.edata", myConn);
                 MySqlCommandBuilder cb = new MySqlCommandBuilder(myDataAdapter);
                 myConn.Open();
-                string Query = "Select * FROM pics ";
+                string Query = "Select * FROM text ";
                 using (MySqlCommand cmdSel = new MySqlCommand(Query, myConn))
                 {
                     DataTable dt = new DataTable();
                     MySqlDataAdapter da = new MySqlDataAdapter(cmdSel);
                     da.Fill(dt);
                     dataGrid1.DataContext = dt;
+
                     List<MyDataObject> list = new List<MyDataObject>();
-                    list.Add(new MyDataObject() { ImageFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv.jpg") });
+                    list.Add(new MyDataObject() { ImageFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv.jpg"), InfoFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv_hr.png") });
                     list.Add(new MyDataObject() { ImageFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lvivcenter.jpg"), InfoFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv_mol.png") });
-                    //list.Add(new MyDataObject() { InfoFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv_mol.png") });
+                    list.Add(new MyDataObject() { ImageFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\high_castle.jpg"), InfoFilePath = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv_high.png") });
                     dataGrid1.ItemsSource = list;
+                    
 
                 }
-
+                
                 //MySqlCommand createCommand = new MySqlCommand(Query, myConn);
                 //createCommand.ExecuteNonQuery();
                 myConn.Close();

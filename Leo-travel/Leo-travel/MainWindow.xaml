@@ -29,17 +29,17 @@
 
                     <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Name="dataGrid1" Margin="1,5,0,0" VerticalAlignment="Top" Height="298" Width="424" CanUserResizeRows="False"  ScrollViewer.HorizontalScrollBarVisibility="Hidden" BorderBrush="Transparent" GridLinesVisibility="Horizontal">
                         <DataGrid.Columns>
-                            <DataGridTemplateColumn Header="Image"  IsReadOnly="True">
+                            <DataGridTemplateColumn Header="Зображення"  IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <Image Source="{Binding ImageFilePath}" Width="172" Height="100"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-                            <DataGridTemplateColumn Header="Info" Width="225" IsReadOnly="True">
+                            <DataGridTemplateColumn Header="Інформація" Width="225" IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Image Source="{Binding InfoFilePath}" Width="225" Height="100"/>
+                                        <Image Source="{Binding InfoFilePath}"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
