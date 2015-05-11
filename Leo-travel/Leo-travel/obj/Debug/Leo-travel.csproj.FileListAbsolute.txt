@@ -27,3 +27,5 @@ E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel_MarkupCompile.
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.g.resources
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo_travel.Properties.Resources.resources
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.csproj.GenerateResource.Cache
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\load.baml
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\load.g.cs

@@ -2,8 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Leo-Travel" Height="450" Width="450
-        " Cursor="Arrow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="450" MaxHeight="450" MinWidth="450" MinHeight="450" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
-
+        " Cursor="Arrow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="450" MaxHeight="450" MinWidth="450" MinHeight="450" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Loaded="Window_Loaded" >
+    
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="E:\Projects\Leo-travel\Leo-travel\Leo-travel\pics\lviv.jpg"/>
@@ -44,7 +44,7 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
-                        
+
                     </DataGrid>
 
                     <Button x:Name="Load_table" Content="Load" HorizontalAlignment="Left" Margin="189,311,0,0" VerticalAlignment="Top" Width="75" Click="Load_table_Click"/>
@@ -67,7 +67,17 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </TabItem.RenderTransform>
-                <Grid Background="#FFE5E5E5" Opacity="0" Margin="0,0,0,-5"/>
+                <Grid Background="#FFE5E5E5" Opacity="0.7" Margin="0,0,0,-5">
+                    <DataGrid AutoGenerateColumns="True" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="4,3,0,0" VerticalAlignment="Top" Height="288" Width="420" Name="DataGrid2" SelectionChanged="DataGrid2_SelectionChanged" HorizontalScrollBarVisibility="Hidden">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding picid}" Header="№"/>
+                            <DataGridTemplateColumn Binding.XmlNamespaceManager="{Binding image}" Header="Photo" Width="190"/>
+
+                            <DataGridTextColumn Binding="{Binding description}" Header="Info" Width="200"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Button" HorizontalAlignment="Left" Margin="192,317,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                </Grid>
             </TabItem>
 
             <TabItem Header="Ресторани" Cursor="Arrow" Margin="56,0,-56,0" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
@@ -85,7 +95,11 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </TabItem.RenderTransform>
-                <Grid Background="#FFE5E5E5" Opacity="0" Margin="0,0,0,-5"/>
+                <Grid Background="#FFE5E5E5" Opacity="0.7" Margin="0,0,0,-5">
+                    <DataGrid>
+             </DataGrid>
+                    <Button Content="Button" HorizontalAlignment="Left" Margin="169,315,0,0" VerticalAlignment="Top" Width="103" Height="27"/>
+                </Grid>
             </TabItem>
 
 

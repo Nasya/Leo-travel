@@ -1,0 +1,8 @@
+﻿<Window x:Class="Leo_travel.load"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="load" Height="216.417" Width="434.328" AllowsTransparency="True" WindowStyle="None" >
+    <Grid>
+        <Image x:Name="imBackGround" />
+    </Grid>
+</Window>
