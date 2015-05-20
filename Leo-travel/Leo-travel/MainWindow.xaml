@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Leo-Travel" Height="450" Width="450
         " Cursor="Arrow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="450" MaxHeight="450" MinWidth="450" MinHeight="450" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Loaded="Window_Loaded" >
-    
+
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="E:\Projects\Leo-travel\Leo-travel\Leo-travel\pics\lviv.jpg"/>
+            <ImageBrush ImageSource=".\pics\lviv.jpg"/>
         </Grid.Background>
         <TabControl HorizontalAlignment="Right"  Width="441" Opacity="1" Background="Transparent" Margin="0,37,1,0"  >
             <TabItem Header="Екскурсії" Cursor="Arrow" Margin="9,0,-9,0" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
@@ -47,7 +47,8 @@
 
                     </DataGrid>
 
-                    <Button x:Name="Load_table" Content="Load" HorizontalAlignment="Left" Margin="189,311,0,0" VerticalAlignment="Top" Width="75" Click="Load_table_Click"/>
+                    <Button x:Name="Load_table" Content="Завантажити" HorizontalAlignment="Left" Margin="107,311,0,0" VerticalAlignment="Top" Width="98" Click="Load_table_Click"/>
+                    <Button Content="Замовлення" HorizontalAlignment="Left" Margin="212,311,0,0" VerticalAlignment="Top" Width="103" Height="25" Click="Button_Click_3"/>
 
                 </Grid>
             </TabItem>
@@ -74,13 +75,14 @@
                             <DataGridTemplateColumn Binding.XmlNamespaceManager="{Binding image}" Header="Photo" Width="190"/>
 
                             <DataGridTextColumn Binding="{Binding description}" Header="Info" Width="200"/>
+                            <DataGridHyperlinkColumn/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button Content="Button" HorizontalAlignment="Left" Margin="192,317,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Ресторани" Cursor="Arrow" Margin="56,0,-56,0" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3">
+            <TabItem Header="Ресторани" Cursor="Arrow" Margin="56,0,-56,0" MinWidth="110" MinHeight="30" MaxWidth="110" MaxHeight="30" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Meiryo" FontWeight="Bold" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.5,0.5" Foreground="Black" Opacity="0.7" Padding="1,1,7,3" HorizontalAlignment="Left" Width="110">
                 <TabItem.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -96,9 +98,27 @@
                     </TransformGroup>
                 </TabItem.RenderTransform>
                 <Grid Background="#FFE5E5E5" Opacity="0.7" Margin="0,0,0,-5">
-                    <DataGrid>
-             </DataGrid>
-                    <Button Content="Button" HorizontalAlignment="Left" Margin="169,315,0,0" VerticalAlignment="Top" Width="103" Height="27"/>
+                    <Button Content="Button" HorizontalAlignment="Left" Margin="169,315,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="Button_Click_2"/>
+                    <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="False" Name="dataGrid3" Margin="1,5,0,0" VerticalAlignment="Top" Height="298" Width="424" CanUserResizeRows="False"  ScrollViewer.HorizontalScrollBarVisibility="Hidden" BorderBrush="Transparent" GridLinesVisibility="Horizontal" >
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="Зображення"  IsReadOnly="True">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding ImageFilePath2}" Width="172" Height="100"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Інформація" Width="225" IsReadOnly="True">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding InfoFilePath2}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+
                 </Grid>
             </TabItem>
 

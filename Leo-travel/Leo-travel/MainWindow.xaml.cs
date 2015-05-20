@@ -16,6 +16,9 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.IO;
 using System.Windows.Threading;
+using System.Drawing;
+using System.Drawing.Imaging;
+
 
 
 namespace Leo_travel
@@ -90,11 +93,7 @@ namespace Leo_travel
 
                 }
                 
-                //MySqlCommand createCommand = new MySqlCommand(Query, myConn);
-                //createCommand.ExecuteNonQuery();
                 myConn.Close();
-
-
             }
 
             catch (Exception ex)
@@ -132,6 +131,21 @@ namespace Leo_travel
                 myDataAd.Fill(dt);
                 DataGrid2.ItemsSource = dt.DefaultView;
                 myDataAd.Update(dt);
+                
+
+
+
+                //foreach (DataRow dr in dt.Rows)
+                //{
+                //    byte[] bytes = (byte[])dr[4];
+                //    MemoryStream stream = new MemoryStream(bytes);
+
+                //    BitmapImage image = new BitmapImage();
+                //    image.BeginInit();
+                //    image.StreamSource = stream;
+                //    image.EndInit();
+                    
+                //}
                 MySqlCommand createCommand = new MySqlCommand(Query, myConn);
                 createCommand.ExecuteNonQuery();
 
@@ -147,42 +161,98 @@ namespace Leo_travel
             }
         }
 
-        
-
-        //public class IntToImageConverter : IValueConverter
-        //{
-
-        //    public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
-        //    {
-        //        ImageSource result = null;
-        //        var intValue = (int)value;
-        //        switch (intValue)
-        //        {
-        //            case 0:
-        //                {
-        //                    result = new BitmapImage(new Uri(@"your_path_to_image_0"));
-        //                    break;
-        //                }
-
-        //            case 1:
-        //                {
-        //                    result = new BitmapImage(new Uri(@"your_path_to_image_1"));
-        //                    break;
-        //                }
-        //        }
-        //        return result;
-        //    }
-
-        //    public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
-        //    {
-        //        throw new NotImplementedException();
-        //    }
-        //}
-
-        
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+           // byte[] Img;
+           // System.Drawing.Bitmap picture;
 
 
+            try
+            {
+                string myConnection = "datasource=localhost;port=3306;username=root;password=1101;Database=leo;";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+                //MySqlDataAdapter sda = new MySqlDataAdapter("", myConn);
+                MySqlCommandBuilder cb ;
+                myConn.Open();
+
+
+                using (MySqlCommand cmdData = new MySqlCommand("SELECT image FROM images", myConn))
+                {
+                    DataTable dbdataset_pic = new DataTable();
+                    MySqlDataAdapter sda = new MySqlDataAdapter(cmdData);
+                    sda.Fill(dbdataset_pic);
+                    //dataGrid1.DataContext = dt;
+                                        
+                   // MySqlCommand cmdData = new MySqlCommand();
+
+                    //DataTable dbdataset_pic;
+                    //   BindingSource bSource = new BindingSource();
+
+                    //  bSource.DataSource = dbdataset;
+                    // dataGridView1.DataSource = bSource;
+                    // sda.Update(dbdataset);
+
+                   // cmdData.CommandText = "SELECT image FROM images";
+
+                   // sda.SelectCommand = cmdData;
+
+                    cb = new MySqlCommandBuilder(sda);
+                   // dbdataset_pic = new DataTable();
+
+                   
+                    //sda.Fill(dbdataset_pic);
+                    string old = @"\";
+                    string new_c = @"\\";
+
+                    List<MyDataObject2> list = new List<MyDataObject2>();
+                    
+                   // foreach (DataRow rows in dbdataset_pic.Rows)
+                   // {
+                        //Img = (byte[])rows[0];
+                    //    MessageBox.Show("OK!");
+                      //  Picture2 = new System.Drawing.Bitmap(new MemoryStream(Img));
+                        //MemoryStream mst = new MemoryStream(Img);                       
+                        //picture = new Bitmap(mst);
+                                                                       
+                        //picture = new Bitmap(new MemoryStream(Img));
+                       
+                        
+                        //list.Add(new Bitmap(mst));
+                      //  list.Add(System.Drawing.Image.FromFile(Directory.GetCurrentDirectory()+"\\"+rows[0]));
+                        
+                        //DataGrid3.Columns[1].SetValue(list[0]);
+                    list.Add(new MyDataObject2() { ImageFilePath2 = new Uri("file:///" + Directory.GetCurrentDirectory() + "@pic/high_castle.jpg"), InfoFilePath2 = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv_mol.png") });
+                     list.Add(new MyDataObject2() { ImageFilePath2 = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv.jpg"), InfoFilePath2 = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv_hr.png") });
+                    list.Add(new MyDataObject2() { ImageFilePath2 = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lvivcenter.jpg"), InfoFilePath2 = new Uri("file:///E:\\Projects\\Leo-travel\\Leo-travel\\Leo-travel\\pics\\lviv_mol.png") });
+
+                    // } .Replace(old, new_c) + new_c + dbdataset_pic.Rows[0]
+                    
+                    dataGrid3.ItemsSource = list;
+
+                }
+                }
+             catch (Exception ex)
+             {
+                MessageBox.Show(ex.Message);
+             } 
+
+            }
+        public class MyDataObject2
+        {
+            public Uri ImageFilePath2 { get; set; }
+            public Uri InfoFilePath2 { get; set; }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+
+        }
 
 
     } 
-    }
+    

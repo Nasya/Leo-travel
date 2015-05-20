@@ -29,3 +29,5 @@ E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo_travel.Properties.Res
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Leo-travel.csproj.GenerateResource.Cache
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\load.baml
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\load.g.cs
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Order.baml
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Order.g.cs
