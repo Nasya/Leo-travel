@@ -31,3 +31,12 @@ E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\load.baml
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\load.g.cs
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Order.baml
 E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Order.g.cs
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\WinForm1.baml
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\WinForm1.g.cs
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Reg.baml
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\Reg.g.cs
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\bin\Debug\itextsharp.dll
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\bin\Debug\itextsharp.pdfa.dll
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\bin\Debug\itextsharp.xtra.dll
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\bin\Debug\itextsharp.xml
+E:\Projects\Leo-travel\Leo-travel\Leo-travel\obj\Debug\GlassButton.baml

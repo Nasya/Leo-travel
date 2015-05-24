@@ -6,18 +6,10 @@
         <Label Content="Enter password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="242,118,0,0" FontSize="16" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
         <Label Content="Enter login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,117,0,0" FontSize="16" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
         <Label Content="Autentification" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="138,29,0,0" FontSize="22" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="43,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" SpellCheck.IsEnabled="True" />
-        <Button Content="Log In" HorizontalAlignment="Left" Margin="156,224,0,0" VerticalAlignment="Top" Width="117" Height="31" FontSize="18" Click="Button_Click" Background="#FFE0E0E0" BorderThickness="0"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="234,153,0,0" VerticalAlignment="Top" Height="31" Width="147" RenderTransformOrigin="0.5,0.5">
-            <PasswordBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.029"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </PasswordBox.RenderTransform>
-        </PasswordBox>
+        <TextBox HorizontalAlignment="Left" Height="32" Margin="43,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" SpellCheck.IsEnabled="True" Name="textBox1" />
+        <Button Content="Log In" HorizontalAlignment="Left" Margin="85,225,0,0" VerticalAlignment="Top" Width="117" Height="31" FontSize="18" Click="Button_Click" Background="#FFE0E0E0" BorderThickness="0"/>
+        <Button Content="Sign in" HorizontalAlignment="Left" Margin="219,225,0,0" VerticalAlignment="Top" Width="117" Height="31" FontSize="18" Click="But_sign" Background="#FFE0E0E0" BorderThickness="0"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="230,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Name="textBox2"/>
 
     </Grid>
 </Window>

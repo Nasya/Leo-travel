@@ -48,7 +48,7 @@
                     </DataGrid>
 
                     <Button x:Name="Load_table" Content="Завантажити" HorizontalAlignment="Left" Margin="107,311,0,0" VerticalAlignment="Top" Width="98" Click="Load_table_Click"/>
-                    <Button Content="Замовлення" HorizontalAlignment="Left" Margin="212,311,0,0" VerticalAlignment="Top" Width="103" Height="25" Click="Button_Click_3"/>
+                    <Button Content="Замовлення" HorizontalAlignment="Left" Margin="212,311,0,0" VerticalAlignment="Top" Width="103" Height="25" Click="Button_Click_3" />
 
                 </Grid>
             </TabItem>
@@ -104,14 +104,14 @@
                             <DataGridTemplateColumn Header="Зображення"  IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Image Source="{Binding ImageFilePath2}" Width="172" Height="100"/>
+                                        <Image Source="{Binding FilePath2}" Width="172" Height="100"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                             <DataGridTemplateColumn Header="Інформація" Width="225" IsReadOnly="True">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Image Source="{Binding InfoFilePath2}"/>
+                                        <Image Source="{Binding description}" Width="172" Height="100"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -126,7 +126,7 @@
 
 
         </TabControl>
-        <Button  HorizontalAlignment="Left" Margin="411,4,0,0" VerticalAlignment="Top" Width="21" Height="13" Click="Button_Click"/>
+        <Button  HorizontalAlignment="Left" Margin="411,4,0,0" VerticalAlignment="Top" Width="21" Height="13" Click="Button_log" />
         <TextBox HorizontalAlignment="Left" Height="23" Margin="37,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285"/>
         <Button Content="Search" HorizontalAlignment="Left" Margin="329,10,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>

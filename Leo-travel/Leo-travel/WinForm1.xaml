@@ -1,0 +1,16 @@
+﻿<Window x:Class="Leo_travel.WinForm1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WinForm1" Height="380.597" Width="452.239">
+    <Grid>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="34" Margin="57,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="309"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="33" Margin="57,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="36" Margin="58,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304"/>
+        <Button Content="Добавити" HorizontalAlignment="Left" Margin="165,309,0,0" VerticalAlignment="Top" Width="110" FontSize="16" Height="36" FontFamily="Segoe Print" Click="Add_but"/>
+        <Label Content="Назва екскурсії" HorizontalAlignment="Left" Margin="64,83,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe Print"/>
+        <Label Content="Ціна" HorizontalAlignment="Left" Margin="66,159,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe Print"/>
+        <Label Content="Час " HorizontalAlignment="Left" Margin="70,228,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe Print"/>
+        <Label Content="Добавлення екскурсії" HorizontalAlignment="Left" Margin="116,18,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe Print"/>
+
+    </Grid>
+</Window>
